@@ -1,5 +1,4 @@
 import { Badge, Flex } from "@chakra-ui/react";
-
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 

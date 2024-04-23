@@ -12,7 +12,7 @@ interface Activity {
 export const fetchActivity = async (): Promise<Activity | null> => {
   try {
     const response = await axios.get<Activity>(
-      "http://www.boredapi.com/api/activity/",
+      "https://www.boredapi.com/api/activity/",
       {
         params: {
           accessibility:

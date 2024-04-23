@@ -1,6 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Define initial state type
 interface InitialState {
   accessibility: number;
   selectedActivities: string;
@@ -18,7 +17,6 @@ interface SavedItem {
   key: string;
 }
 
-// Define initial state
 const initialState: InitialState = {
   accessibility: -1,
   selectedActivities: "",
@@ -26,7 +24,6 @@ const initialState: InitialState = {
   savedItems: [],
 };
 
-// Define reducers
 const appSlice = createSlice({
   name: "app",
   initialState,
@@ -51,7 +48,6 @@ const appSlice = createSlice({
   },
 });
 
-// Export actions
 export const {
   updateAccessibility,
   updateSelectedActivities,
@@ -60,11 +56,10 @@ export const {
   deleteSave,
 } = appSlice.actions;
 
-// Create store
 const store = configureStore({
   reducer: appSlice.reducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>; // Define RootState type
+export type RootState = ReturnType<typeof store.getState>;
 
 export default store;
